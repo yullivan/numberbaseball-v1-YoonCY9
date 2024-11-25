@@ -2,6 +2,7 @@ package numberbaseball;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Application {
@@ -10,9 +11,13 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> numbers = new ArrayList<>();
 
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
+        Random random = new Random();
+        while (numbers.size() < 3) {
+            int randNum = random.nextInt(9) + 1;
+            if (!numbers.contains(randNum)) {
+                numbers.add(randNum);
+            }
+        }
 
         int strike = 0;
         int ball = 0;
@@ -35,10 +40,8 @@ public class Application {
                 if (Objects.equals(userInput.get(i), numbers.get(i))) {
                     strike++;
                 }
-                for (int j = 0; j < 3; j++) {
-                    if (!Objects.equals(userInput.get(i), numbers.get(i)) &&
-                            Objects.equals(userInput.get(i), numbers.get(j)))
-                        ball++;
+                else if (userInput.contains(numbers.get(i))) {
+                    ball++;
                 }
             }
             // 유저 인풋이 1 1 1 이면
@@ -55,7 +58,7 @@ public class Application {
             // TODO: 결과를 출력하세요 (예: "1 스트라이크")
             // TODO: 3 스트라이크인 경우 게임을 끝내세요
 
-            System.out.println(strike + " 스트라이크" + ball + " 볼");
+            System.out.println(strike + " 스트라이크 " + ball + " 볼");
             if (strike == 3) {
                 break;
             }
