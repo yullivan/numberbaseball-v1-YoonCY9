@@ -51,7 +51,7 @@ public class Application {
                     break;
                 default:
                     System.out.println("0 스트라이크");
-                    continue;
+                    break;
             }
             count = 0;
 
