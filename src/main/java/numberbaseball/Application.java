@@ -48,6 +48,7 @@ public class Application {
                 System.out.println("잘못된 입력입니다.");
                 continue;
             }
+            // 위는 반복문으로 간소화 가능
 
             for (int i = 0; i < 3; i++) {
                 if (Objects.equals(userInput.get(i), randomNumbers.get(i))) {
