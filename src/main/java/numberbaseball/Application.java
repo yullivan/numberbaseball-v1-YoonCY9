@@ -20,7 +20,7 @@ public class Application {
         }
 
         System.out.println("숫자 야구 게임을 시작합니다!");
-        System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
+        System.out.println("1 부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
 
         while (true) {
             int strike = 0;
