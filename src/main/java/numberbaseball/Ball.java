@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class Ball {
+    // number = 수
+    // position = 자리
 
     int number;
     int position;

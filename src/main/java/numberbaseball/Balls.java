@@ -1,5 +1,7 @@
 package numberbaseball;
 
+import java.util.Objects;
+
 public class Balls {
 
     Ball ball1;
@@ -13,15 +15,18 @@ public class Balls {
     }
 
     public String matchStatus(Ball ball) {
-        String status = ball.matchStatus(ball1);
-        if (status.equals("STRIKE")) {
-            return "STRIKE";
-        }
-        else if (ball.matchStatus(ball1).equals("BALL")) {
-            return "BALL";
-        }
-        return "NOTHING";
 
+        if (!ball.matchStatus(ball1).equals("NOTHING")) {
+            return ball.matchStatus(ball1);
+        }
+        if (!ball.matchStatus(ball2).equals("NOTHING")) {
+            return ball.matchStatus(ball2);
+        }
+        if (!ball.matchStatus(ball3).equals("NOTHING")) {
+            return ball.matchStatus(ball3);
+        }
+
+        return "NOTHING";
     }
 
 }
