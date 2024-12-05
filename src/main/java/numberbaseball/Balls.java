@@ -12,11 +12,16 @@ public class Balls {
         this.ball3 = ball3;
     }
 
-//    public String matchStatus(Ball ball) {
-//        String status = ball.matchStatus(ball1);
-//        if (status.equals("STRIKE")) {
-//
-//        }
-//    }
+    public String matchStatus(Ball ball) {
+        String status = ball.matchStatus(ball1);
+        if (status.equals("STRIKE")) {
+            return "STRIKE";
+        }
+        else if (ball.matchStatus(ball1).equals("BALL")) {
+            return "BALL";
+        }
+        return "NOTHING";
+
+    }
 
 }
