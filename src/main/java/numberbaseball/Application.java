@@ -57,15 +57,6 @@ public class Application {
                     ball++;
                 }
             }
-            // 유저 인풋이 1 1 1 이면
-//            for (int i = 0; i < 3; i++) {
-//                for (int j = 0; j < 3; j++) {
-//                    if (!Objects.equals(userInput.get(i), randomNumbers.get(i)) &&
-//                            Objects.equals(userInput.get(i), randomNumbers.get(j)))
-//                        ball++;
-//                }
-//            }
-
 
             // TODO: strike 개수를 계산하세요
             // TODO: 결과를 출력하세요 (예: "1 스트라이크")
